@@ -1,0 +1,75 @@
+:root{
+   --Back-Collor: #ECEBF5;
+   --Border-Line: #e5e3fd;
+   --Sky-Ble: #5DD3CC;
+   --Game-Back-Collor: #FFE7C3;
+   --Ground-Collor: #33323D;
+   --Shadow: #212027;
+
+   --Alfa-Slab-One: "Alfa Slab One", serif;
+   --Roboto-Slab: "Roboto Slab", serif;
+}
+
+/* For Ground Container  📥*/
+.groundGame{
+   width: 100%;
+   min-height: 468px !important;
+   background-color: var(--Ground-Collor);
+   position: relative;
+   background-image: url(GameBUB-Pics/MainGround.png);
+   z-index: 100;
+}
+
+.gameOver{
+   position: absolute;
+   width: 12rem;
+   top: 10rem;
+   user-select: none;
+
+   left: 50%;
+   transform: translateX(-52%);
+}
+
+.gr-lose-add, .gr-label{
+   color: var(--Back-Collor);
+   font-family: var(--Roboto-Slab);
+   text-shadow: -2px 2px 1px var(--Shadow);
+
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+}
+.gr-label{
+   padding-top: 18.5rem;
+   font-size: .9rem;
+   letter-spacing: 1px;
+   font-weight: 900;
+}
+.gr-lose-add{
+   padding-top: 20rem;
+   font-size: .7rem;
+   letter-spacing: 1px;
+   color: red;
+}
+
+.gr-btns-holder{
+   padding-top: 23rem;
+   position: absolute;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+
+   left: 50%;
+   transform: translateX(-50%);
+}
+#play_again{
+   color: var(--Ground-Collor);
+   font-family: var(--Roboto-Slab);
+   font-weight: bolder;
+   font-size: 12px;
+   padding: 7px 13px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
