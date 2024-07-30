@@ -1,0 +1,115 @@
+/* Top Cloud */
+
+
+.top-cloudsL,.top-cloudsR{
+   position: absolute;
+   user-select: none;
+   top: 3rem;
+}
+
+.tc1{
+   top: 3.8rem;
+   width: 6rem;
+   left: 6rem;
+}
+.tc2{
+   top: 7.4rem;
+   width: 9rem;
+   left: -2.7rem;
+}
+.tc3{
+   top: 5.9rem;
+   width: 9rem;
+   right: -2.7rem;
+}
+.tc4{
+   top: 15.6rem;
+   width: 9rem;
+   right: 2.7rem;
+}
+.tc5{
+   top: 18.9rem;
+   width: 5rem;
+   left: -1.2rem;
+}
+.tc6{
+   top: 19.9rem;
+   width: 9rem;
+   right: -4.2rem;
+}
+.tc7{
+   top: 26.9rem;
+   width: 9rem;
+   right: -1rem;
+} 
+.tc8{
+   top: 31.9rem;
+   width: 7rem;
+   left: 3.2rem;
+  
+}
+.hide-cloudsL{
+   animation: cloudsHideL 1s forwards;
+}
+.hide-cloudsR{
+   animation: cloudsHideR 1s forwards;
+}
+.dly{
+   animation-delay: .2s;
+}
+@keyframes cloudsHideL{
+   to{
+      opacity: 0;
+      transform: scale(.3);
+      transform: translateY(5rem) translateX(-5rem);
+      /* top: 8rem; */
+   }
+}
+@keyframes cloudsHideR{
+   to{
+      opacity: 0;
+      transform: scale(.3);
+      transform: translateY(5rem) translateX(5rem);
+      /* top: 8rem; */
+   }
+}
+
+
+
+
+
+
+
+/* Mid Cloud */
+
+.cloud{
+   position: absolute;
+   user-select: none !important;
+}
+.c1{
+   width: 5rem;
+   top: .5rem;
+   left: -10rem;
+}
+.c2{
+   width: 9rem;
+   top: 3rem;
+   left: -10rem;
+}
+.c3{
+   width: 11rem;
+   top: 2rem;
+   right: -15rem;
+}
+.c1-cloud-entry{
+   animation: cl1-In 1.2s linear forwards;
+}
+.c2-cloud-entry{
+   animation: cl2-In 1.2s linear forwards;
+}
+.c3-cloud-entry{
+   animation: cl3-In 1.2s linear forwards;
+}
+@keyframes cl1-In {to{left: 4rem;}}
+@keyframes cl2-In {to{left: -2.8rem;}}
+@keyframes cl3-In {to{right: -3.7rem;}}
