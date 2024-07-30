@@ -1,0 +1,124 @@
+:root{
+   --Back-Collor: #ECEBF5;
+   --Border-Line: #e5e3fd;
+   --Sky-Ble: #5DD3CC;
+   --Game-Back-Collor: #FFE7C3;
+   --Ground-Collor: #33323D;
+   --Shadow: #212027;
+   --Light-yel: #F5F1DE;
+
+   --Alfa-Slab-One: "Alfa Slab One", serif;
+   --Roboto-Slab: "Roboto Slab", serif;
+}
+
+/*Div Start-Game Container*/
+.topGame{
+   width: 100%;
+   min-height: 680px !important;
+   background-color: var(--Sky-Ble);
+   position: relative;
+
+   cursor: pointer;
+}
+#game-title{
+   position: absolute;
+   top: 7rem;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 11rem;
+} 
+.hideTitle{
+   animation: scaleDown 500ms forwards;
+}
+@keyframes scaleDown {
+   to{
+      transform: scale(0.6);
+      left: 25%;
+      opacity: 0;
+   } 
+}
+
+
+.score-header{
+   width: 180px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   position: absolute;
+   top: 2.4rem;
+   left: 50%;
+   transform: translateX(-50%);
+   border-radius: 0 0 13px 13px;
+
+   padding: 6px 7px;
+   font-family: var(--Roboto-Slab);
+   background-color: var(--Light-yel);
+   z-index: 3;
+}
+.hide-records{
+   top: -2rem !important;
+   transition: 500ms;
+}
+#records{
+   font-weight: bolder;
+   margin-right: 10px;
+   color: var(--Ground-Collor);
+   font-size: 14px;
+}
+#score-win,#score-lose{
+   font-size: 11px;
+   color: var(--Ground-Collor);
+   font-weight: 400;
+}
+#win{
+   color: rgb(9, 185, 9);
+}
+#lose{
+   color: red;
+}
+#score-lose{
+   margin-left: 10px;
+}
+#title-label{
+   position: absolute;
+   top: 13.5rem;
+
+   font-family: var(--Roboto-Slab);
+   font-weight: 900;
+   font-size: .9rem;
+   letter-spacing: 1.4px;
+   word-spacing: -1px;
+   color: var(--Ground-Collor);
+
+   left: 50%;
+   transform: translateX(-50%);
+   animation: tapZoom 1000ms linear infinite;
+}
+@keyframes tapZoom {
+   from{
+      transform: scaleZ(0);
+   }to{
+      transform: scaleZ(21px);
+   }
+}
+
+.bird{
+   position: absolute;
+   z-index: 2;
+   width: 2rem;
+
+   top: 15rem;
+   right: -3rem;
+   animation: showBird 12s linear infinite;
+}
+@keyframes showBird {
+   to{
+      transform: translateX(-55rem) translateY(-6rem); 
+   } 
+} 
+
+
+
+
+
