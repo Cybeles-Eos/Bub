@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="GameBUB-css/Game.css">
+   <link rel="stylesheet" href="GameBUB-css/top-game-start.css">
+   <link rel="stylesheet" href="GameBUB-css/-cloud.css">
+   <link rel="stylesheet" href="GameBUB-css/main-battle.css">
+   <link rel="stylesheet" href="GameBUB-css/-trees.css">
+   <link rel="stylesheet" href="GameBUB-css/ground-game.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Game | Combat-Rei</title>
+</head>
+<body>
+   <button class="sub-btn">btn Ground</button>
+
+   <main>
+      <div class="mainG">
+         <div class="topGame">
+            <div class="score-header">
+               <p id="records">Records</p>
+               <p id="score-win">Win : <span id="win">0</span></p>
+               <p id="score-lose">Lose : <span id="lose">0</span></p>
+            </div>
+            <img id="game-title" src="GameBUB-css/GameBUB-Pics/Tittle.png" alt="">
+            <p id="title-label">Tap to start</p>
+
+            <!-- Birds -->
+            <img class="bird" src="GameBUB-css/GameBUB-Pics/GIF/BirdFly.gif">
+
+            <img class="top-cloudsL tc1" src="GameBUB-css/GameBUB-Pics/Small Cloud 1.png">
+            <img class="top-cloudsR tc2" src="GameBUB-css/GameBUB-Pics/Small Cloud 2.png">
+            <img class="top-cloudsL tc3" src="GameBUB-css/GameBUB-Pics/Small Cloud 1.png">
+            <img class="top-cloudsR tc4" src="GameBUB-css/GameBUB-Pics/Small Cloud 3.png">
+            <img class="top-cloudsL tc5" src="GameBUB-css/GameBUB-Pics/Small Cloud 1.png">
+            <img class="top-cloudsR tc6" src="GameBUB-css/GameBUB-Pics/Small Cloud 1.png">
+            
+            <!-- Mid level top -->
+            <img class="top-cloudsR tc7 dly" src="GameBUB-css/GameBUB-Pics/Small Cloud 1.png">
+            <img class="top-cloudsL tc8 dly" src="GameBUB-css/GameBUB-Pics/Small Cloud 2.png">
+         </div>
+         <div class="midGame">
+            <img class="cloud c1" src="GameBUB-css/GameBUB-Pics/Small Cloud 1.png">
+            <img class="cloud c2" src="GameBUB-css/GameBUB-Pics/Small Cloud 3.png">
+            <img class="cloud c3" src="GameBUB-css/GameBUB-Pics/Small Cloud 2.png">
+            <img class="trees t1" src="GameBUB-css/GameBUB-Pics/GIF/SmallPalm.gif">
+            <img class="trees t2" src="GameBUB-css/GameBUB-Pics/GIF/SmallPalm50c.gif">
+            <img class="trees t3" src="GameBUB-css/GameBUB-Pics/GIF/BigPalm50c.gif">
+            <img class="trees t4" src="GameBUB-css/GameBUB-Pics/GIF/SmallPalm50c.gif"> 
+               
+
+         </div>
+         <div class="groundGame">
+    
+            <img class="gameOver" src="GameBUB-css/GameBUB-Pics/GameOver.png">
+            <p class="gr-label">Record</p>
+            <p class="gr-lose-add">lose + 1</p>
+
+            <div class="gr-btns-holder">
+               <!-- <button id="reset_records">Reset records</button> -->
+               <button id="play_again">Play Again</button>
+            </div>
+         </div>
+      </div>
+   </main>
+
+   <!-- Button Attack -->
+   <section id="button-holder">
+      <button class="attack-button" id="btn"></button>
+   </section>
+
+   <!-- Win-box Section -->
+   <article>
+      <section class="win-box">
+         <img class="win-clouds win_c1" src="GameBUB-css/GameBUB-Pics/Small Cloud 1.png">
+         <img class="win-clouds win_c2" src="GameBUB-css/GameBUB-Pics/Small Cloud 3.png">
+
+         <img class="win-title" src="GameBUB-css/GameBUB-Pics/YouWin.png">
+        
+         <div class="win-text-holder">
+            <p id="win_record">Record:</p>
+            <p id="win-win-text">win: +1</p>
+         </div>
+
+         <button id="play-another">Play another</button> 
+      </section>
+   </article>
+
+   <!-- Audio Section -->
+   <audio id="swish-down">
+      <source src="GameBUB-css/GameBUB-Audios/mixkit-air-woosh-1489.wav" type="audio/ogg">
+   </audio>
+   <audio id="btn-sound">
+      <source src="GameBUB-css/GameBUB-Audios/matPunk.mp3" type="audio/ogg">
+      <!-- <source src="GameBUB-css/GameBUB-Audios/QKTA234-pop.mp3" type="audio/ogg"> -->
+      <!-- <source src="GameBUB-css/GameBUB-Audios/mixPu.mp3" type="audio/ogg"> -->
+   </audio>
+</body>
+<script src="Game.js"></script>
+</html>
