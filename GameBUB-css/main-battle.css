@@ -1,0 +1,29 @@
+:root{
+   --Back-Collor: #ECEBF5;
+   --Border-Line: #e5e3fd;
+   --Sky-Ble: #5DD3CC;
+   --Game-Back-Collor: #FFE7C3;
+   --Ground-Collor: #33323D;
+   --Shadow: #212027;
+}
+
+.midGame{
+   width: 100%;
+   min-height: 212px !important; 
+   background: linear-gradient(
+      0deg,
+      var(--Game-Back-Collor) 48%,
+      var(--Sky-Ble)
+   );
+
+   position: relative;
+}
+
+/* Clouds Img */
+
+
+
+
+
+
+
