@@ -1,0 +1,221 @@
+/* Main CSS for Parent Containers */
+
+:root{
+   --Back-Collor: #ECEBF5;
+   --Border-Line: #e5e3fd;
+   --Sky-Ble: #5DD3CC;
+   --Game-Back-Collor: #FFE7C3;
+   --Ground-Collor: #33323D;
+   --Shadow: #212027;
+
+   --Alfa-Slab-One: "Alfa Slab One", serif;
+   --Roboto-Slab: "Roboto Slab", serif;
+}
+
+*{
+   margin: 0;
+   padding: 0;
+}
+
+body{
+   background-color: var(--Back-Collor);
+}
+
+main{
+   max-width: 320px;
+   height: 340px;
+   position: relative;
+   margin: 0 auto;
+
+   overflow: hidden;
+   border: 10px solid var(--Border-Line);
+   /* border-style: ridge; */
+   border-radius: 15px;
+   z-index: 3;
+}
+.mainG{
+   width: 100%;
+   height: 100%;
+
+   transition: 1s;
+   transform: translateY(980px);
+   /*980px-StartGame, 340px-BattleField, 0px-GameOver*/
+
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+  
+}
+
+/*Button Attack - btn*/
+#button-holder{
+   width: 320px;
+   margin: 0 auto;
+   margin-top: 3rem !important;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.attack-button{
+   width: 9rem;
+   aspect-ratio: 1;
+   border-radius: 50rem;
+   border: none;
+   background-color: var(--Ground-Collor);
+
+   background-image: url(GameBUB-Pics/SwordButton.png);
+   background-position: center;
+   background-size: contain;
+   box-shadow: -5px 5px 1px var(--Shadow);
+   
+   cursor: pointer;
+   user-select: none !important;
+   opacity: 0;
+   pointer-events: none;
+   /* transition: 100ms; */
+}
+.attack-button:active{
+   transform: translateX(-5px) translateY(5px);
+   box-shadow: none !important;
+}
+.show_btn{
+   opacity: 1;
+   transition: 1.2s;
+   pointer-events: all !important;
+}
+
+
+
+.sub-btn{/* remove this if CONTINUED 🛑 */
+   position: absolute;
+   padding: 3px 1rem;
+   background-color: var(--Shadow);
+   border: none;
+
+   color: var(--Back-Collor);
+   text-transform: uppercase;
+   font-family: var(--Roboto-Slab);
+   font-size: .7rem;
+   letter-spacing: .6px;
+   border-radius: 3px;
+   cursor: pointer;
+
+   bottom: 1rem;
+   right: 1rem;
+}
+
+
+
+
+/* For Winning Section 🧇🧇 */
+article{
+   position: absolute;
+   background-color: #212027c4;
+   width: 100%;
+   height: 100vh;
+
+   top: 0;
+   z-index: 5;
+
+   display: flex;
+   justify-content: center;
+
+   display: none; /* remove this if CONTINUED 🛑 */
+}
+
+.win-box{
+   width: 340px;
+   height: 280px;
+   background: linear-gradient(
+      0deg,
+      var(--Game-Back-Collor) 40%,
+      var(--Sky-Ble)
+   );
+   border-radius: 7px;
+   margin-top:8rem;
+
+   overflow: hidden;
+   position: relative;
+
+   animation: showWinBox 700ms ease-out forwards;
+}
+@keyframes showWinBox {
+   20%{
+      opacity: 0;
+      transform: translateY(-10rem) scale(0);
+      visibility: hidden;
+   }                
+   55%{                       
+      opacity: 0;
+   }
+   to{
+      opacity: 1;
+      transform: translateY(2rem) scale(1);
+   }
+}
+
+.win-clouds{
+   position: absolute;
+   user-select: none;
+}
+.win_c1{
+   width: 6rem;
+   top: 1rem;
+   left: -1.4rem;
+}
+.win_c2{ 
+   width: 8rem;
+   top: 5rem;  
+   right: -3.6rem; 
+}
+
+.win-title{
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 10rem;
+   top: 1.2rem;
+}
+
+.win-text-holder{
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   top: 9rem;
+}
+#win_record{
+   font-size: 14px;
+   font-weight: bolder;
+   font-family: var(--Roboto-Slab);
+   margin-bottom: .7rem;
+   letter-spacing: 1px;
+   color: var(--Ground-Collor);
+}
+#win-win-text{
+   color: green;
+   font-family: var(--Roboto-Slab);
+   font-size: 12px;
+   font-weight: 500;
+   letter-spacing: .6px;
+   margin-left: .3rem;
+}
+#play-another{
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   bottom: 2rem;
+   padding: 9px 1.2rem;
+
+   font-family: var(--Roboto-Slab);
+   font-weight: bolder;
+   font-size: 11px;
+   letter-spacing: 1px;
+   color: var(--Back-Collor);
+
+
+   border: none;
+   background-color: var(--Ground-Collor);
+   border-radius: 5px;
+
+   cursor: pointer;
+}
